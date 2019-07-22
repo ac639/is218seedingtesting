@@ -17,12 +17,41 @@ class UserTest extends TestCase
      */
     public function testExample()
     {
-        //$user = User::find(1);
-        $user = User::inRandomOrder()->first();
+        //Test 1
 
-        dd($user);
-        $this->assertInternalType('int',$user->id);
+        $user = User::find(1);
+        //dd($user);
 
-        //$this->assertTrue(true);
+        $this->assertTrue(true);
+
+        ////////////////////////////////////
+
+        //Test 2
+        $user2 = User::inRandomOrder()->first();
+
+
+        $this->assertInternalType('int',$user2->id);
+
+
+    }
+
+    public function testExample2()
+    {
+
+        $user = User::find(1);
+
+
+        $this->assertInstanceOf('App\User',$user);
+
+    }
+
+    public function testExample3()
+    {
+
+        $user = User::all();
+
+
+        $this->assertTrue(true);
+
     }
 }
