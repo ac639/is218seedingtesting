@@ -34,12 +34,15 @@ class HomeController extends Controller
         //$user = Auth::user();
 
         $users = User::all();
+
+        //$users = Auth::user();
         //$users = User::where('id', 1)
         //    ->orderBy('name', 'desc')
         //    ->take(10)
         //    ->get();
 
-        dd($users->count());
+        //dd($users->count());
+        //dd($users->posts());
 
         //$user = User::find(1);
 
